@@ -23,12 +23,12 @@ public class MyApplication {
         return "This is branch 2!";
     }
     
-    @GetMapping("/branch3")
+    @GetMapping("/branch2/branch3")
     public String branch3() {
         return "This is branch 3!";
     }
     
-    @GetMapping("/branch4")
+    @GetMapping("/branch2/branch4")
     public String branch4() {
         return "This is branch 4!";
     }
