@@ -1,0 +1,16 @@
+Главный (main)
+Ветвь 1 (branch-1)
+Ветвь 2 (branch-2)
+Ветвь 3 (branch-3)
+Ветвь 4 (branch-4)
+
+
+
+git checkout -b main
+
+
+git checkout -b branch-1 main
+git checkout -b branch-2 main
+
+git checkout -b branch-3 branch-2
+git checkout -b branch-4 branch-2
