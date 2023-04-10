@@ -1,27 +1,35 @@
-plugins {
-  id 'java'
-  id 'org.springframework.boot' version '3.0.5'
-  id 'io.spring.dependency-management' version '1.1.0'
-}
+package com.example.myproject;
 
-group = 'com.example'
-version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '17'
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-repositories {
-  mavenCentral()
-}
+@SpringBootApplication
+@RestController
+public class MyApplication {
 
-dependencies {
-  implementation 'org.springframework.boot:spring-boot-starter'
-  testImplementation 'org.springframework.boot:spring-boot-starter-test'
-}
+    public static void main(String[] args) {
+        SpringApplication.run(MyApplication.class, args);
+    }
 
-tasks.named('test') {
-  useJUnitPlatform()
+    @GetMapping("/")
+    public String helloWorld() {
+        return "Hello, World!";
+    }
+    
+    @GetMapping("/branch2")
+    public String branch2() {
+        return "This is branch 2!";
+    }
+    
+    @GetMapping("/branch3")
+    public String branch3() {
+        return "This is branch 3!";
+    }
+    
+    @GetMapping("/branch4")
+    public String branch4() {
+        return "This is branch 4!";
+    }
 }
-//git checkout -b main
-//git checkout -b branch-1 main
-//git checkout -b branch-2 mai
-//git checkout -b branch-3 branch-2
-git checkout -b branch-4 branch-2
